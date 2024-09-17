@@ -1,0 +1,68 @@
+apiVersion: apps/v1beta2
+kind: Knowledge
+metadata:
+  annotations:
+    field.cattle.io/creatorId: user-1
+    field.cattle.io/publicEndpoints: '[{"nodeName":"","addresses":["0.0.0.0"],"port":00000,"protocol":"TCP","podName":"knowledge-api:knowledge-docs-hub","allNodes":false}]'
+  labels:
+    app: knowledge-docs-hub
+    cattle.io/creator: norman
+    workload.user.cattle.io/workloadselector: deployment-knowledge-api-knowledge-docs-hub
+  name: knowledge-docs-hub
+  namespace: knowledge-api
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      workload.user.cattle.io/workloadselector: deployment-knowledge-api-knowledge-docs-hub
+  strategy:
+    rollingUpdate:
+      maxSurge: 0
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      annotations:
+        cattle.io/timestamp: "2024-08-21T17:47:39Z"
+        field.cattle.io/ports: '[[{"containerPort":80,"dnsName":"knowledge-docs-hub-hostport","hostPort":00000,"kind":"HostPort","name":"80tcp00000","protocol":"TCP","sourcePort":00000}]]'
+      labels:
+        app: knowledge-docs-hub
+        workload.user.cattle.io/workloadselector: deployment-knowledge-api-knowledge-docs-hub
+    spec:
+      containers:
+        - env:
+          image: 0.0.0.0:0000/knowledge/knowledge.docs.hub.dev:latest
+          imagePullPolicy: Always
+          livenessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /health/self
+              port: 80
+              scheme: HTTP
+            initialDelaySeconds: 10
+            periodSeconds: 60
+            successThreshold: 1
+            timeoutSeconds: 2
+          name: knowledge-docs-hub
+          ports:
+            - containerPort: 80
+              name: 80tcp2
+              protocol: TCP
+          securityContext:
+            allowPrivilegeEscalation: false
+            privileged: false
+            procMount: Default
+            readOnlyRootFilesystem: false
+            runAsNonRoot: false
+          stdin: true
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          tty: true
+      dnsPolicy: ClusterFirst
+      imagePullSecrets:
+        - name: internal
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      terminationGracePeriodSeconds: 30
