@@ -19,6 +19,12 @@ export default defineConfig({
       '/pages/AI/': sidebarIA,
     },
 
+    // Navegación entre páginas
+    docFooter: {
+      prev: 'Pagina anterior',   // Texto para la página anterior
+      next: 'Proxima pagina'     // Texto para la página siguiente
+    },
+
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ]
