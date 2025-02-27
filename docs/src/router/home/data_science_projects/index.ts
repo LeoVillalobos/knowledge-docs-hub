@@ -21,7 +21,8 @@ export const routesDataScienceProjects = {
         {text:'how_models_work', link: '/pages/home/data_science_projects/intro_to_machine_learning/how_models_work'},
         {text:'basic_data_exploracion', link: '/pages/home/data_science_projects/intro_to_machine_learning/basic_data_exploracion'},
         {text:'first_machine_learning_model', link: '/pages/home/data_science_projects/intro_to_machine_learning/first_machine_learning_model'},
-        {text:'model_validation', link: '/pages/home/data_science_projects/intro_to_machine_learning/model_validation'}
+        {text:'model_validation', link: '/pages/home/data_science_projects/intro_to_machine_learning/model_validation'},
+        {text:'underfitting_and_overfitting', link: '/pages/home/data_science_projects/intro_to_machine_learning/underfitting_and_overfitting'}
       ]
     }
   ]
