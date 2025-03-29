@@ -18,8 +18,7 @@ El machine learning funciona de la misma manera. Comenzaremos con un modelo llam
 
 Para simplificar, comenzaremos con el árbol de decisión más simple posible.
 
-<img src="/home/data_science_projects/models_work_3.png" >
-
+<!-- <img src="/home/data_science_projects/models_work_3.png" > -->
 
 Este modelo básico divide las casas en solo dos categorías. El precio predicho para cualquier casa bajo consideración es el precio promedio histórico de las casas en la misma categoría.
 
@@ -27,14 +26,13 @@ Usamos datos para decidir cómo dividir las casas en dos grupos y, luego, para d
 
 Los detalles de cómo se ajusta el modelo (por ejemplo, cómo dividir los datos) son lo suficientemente complejos como para dejarlos para más adelante. Después de que el modelo se haya ajustado, puedes aplicarlo a nuevos datos para predecir precios de otras viviendas.
 
-
 ---
 
 ## Mejorando el Árbol de Decisión
 
 ¿Cuál de los siguientes dos árboles de decisión es más probable que resulte al ajustar los datos de entrenamiento de bienes raíces?
 
-<img src="/home/data_science_projects/models_work_2.png" >
+<!-- <img src="/home/data_science_projects/models_work_2.png" > -->
 
 El árbol de decisión de la izquierda (Árbol de Decisión 1) probablemente tiene más sentido, ya que captura la realidad de que las casas con más habitaciones tienden a venderse a precios más altos que las casas con menos habitaciones. La mayor limitación de este modelo es que no captura la mayoría de los factores que afectan el precio de una vivienda, como el número de baños, el tamaño del terreno, la ubicación, etc.
 
@@ -42,7 +40,7 @@ Puedes capturar más factores usando un árbol con más "divisiones", llamados *
 
 **Árbol de Profundidad 2**
 
-<img src="/home/data_science_projects/models_work_1.png" />
+<!-- <img src="/home/data_science_projects/models_work_1.png" /> -->
 
 Predices el precio de cualquier casa siguiendo el árbol de decisión, siempre eligiendo el camino que corresponde a las características de esa casa. El precio predicho para la casa está en la parte inferior del árbol. El punto en la parte inferior donde hacemos una predicción se llama **hoja**.
 

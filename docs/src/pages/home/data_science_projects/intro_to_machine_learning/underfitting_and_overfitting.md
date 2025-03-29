@@ -1,8 +1,6 @@
-
-
 # Underfitting y Overfitting (Subajuste y Sobreajuste)
 
-Al final de este paso, comprenderás los conceptos de *underfitting* y *overfitting*, y serás capaz de aplicar estas ideas para hacer que tus modelos sean más precisos.
+Al final de este paso, comprenderás los conceptos de _underfitting_ y _overfitting_, y serás capaz de aplicar estas ideas para hacer que tus modelos sean más precisos.
 
 ## Experimentando con Diferentes Modelos
 
@@ -10,9 +8,7 @@ Ahora que tienes una forma confiable de medir la precisión de un modelo, puedes
 
 En la documentación de scikit-learn, puedes ver que el modelo de árbol de decisión tiene muchas opciones (más de las que probablemente quieras o necesites por mucho tiempo). Las opciones más importantes determinan la profundidad del árbol. Recuerda, desde la primera lección de este curso, que la profundidad de un árbol mide cuántas divisiones realiza antes de llegar a una predicción. Este es un árbol relativamente poco profundo.
 
-
-<img src="/home/data_science_projects/models_work_4.png" >
-
+<!-- <img src="/home/data_science_projects/models_work_4.png" > -->
 
 ## En la Práctica
 
@@ -21,22 +17,19 @@ En la práctica, no es raro que un árbol tenga 10 divisiones entre el nivel sup
 
 Cuando dividimos las casas entre muchas hojas, también tenemos menos casas en cada hoja. Las hojas con muy pocas casas harán predicciones muy cercanas a los valores reales de esas casas, pero pueden hacer predicciones poco confiables para nuevos datos (porque cada predicción se basa solo en unas pocas casas).
 
-Este es un fenómeno llamado *overfitting* (sobreajuste), donde un modelo coincide casi perfectamente con los datos de entrenamiento, pero tiene un mal desempeño en la validación y en otros datos nuevos. Por otro lado, si hacemos nuestro árbol muy superficial, no divide las casas en grupos muy distintos.
+Este es un fenómeno llamado _overfitting_ (sobreajuste), donde un modelo coincide casi perfectamente con los datos de entrenamiento, pero tiene un mal desempeño en la validación y en otros datos nuevos. Por otro lado, si hacemos nuestro árbol muy superficial, no divide las casas en grupos muy distintos.
 
-En un extremo, si un árbol divide las casas solo en 2 o 4, cada grupo aún tiene una amplia variedad de casas. Las predicciones resultantes pueden estar muy lejos de los valores reales de la mayoría de las casas, incluso en los datos de entrenamiento (y también serán malas en la validación por la misma razón). Cuando un modelo no logra capturar distinciones y patrones importantes en los datos, por lo que tiene un mal desempeño incluso en los datos de entrenamiento, eso se llama *underfitting* (subajuste).
+En un extremo, si un árbol divide las casas solo en 2 o 4, cada grupo aún tiene una amplia variedad de casas. Las predicciones resultantes pueden estar muy lejos de los valores reales de la mayoría de las casas, incluso en los datos de entrenamiento (y también serán malas en la validación por la misma razón). Cuando un modelo no logra capturar distinciones y patrones importantes en los datos, por lo que tiene un mal desempeño incluso en los datos de entrenamiento, eso se llama _underfitting_ (subajuste).
 
-Dado que nos importa la precisión en los nuevos datos, que estimamos a partir de nuestros datos de validación, queremos encontrar el punto medio entre el *underfitting* y el *overfitting*. Visualmente, queremos el punto más bajo de la curva de validación (roja) en la figura a continuación.
+Dado que nos importa la precisión en los nuevos datos, que estimamos a partir de nuestros datos de validación, queremos encontrar el punto medio entre el _underfitting_ y el _overfitting_. Visualmente, queremos el punto más bajo de la curva de validación (roja) en la figura a continuación.
 
-
-<img src="/home/data_science_projects/mean_absolute_error.png" >
-
+<!-- <img src="/home/data_science_projects/mean_absolute_error.png" > -->
 
 ## Ejemplo
 
-Existen algunas alternativas para controlar la profundidad del árbol, y muchas permiten que algunas rutas a través del árbol tengan mayor profundidad que otras. Sin embargo, el argumento `max_leaf_nodes` proporciona una forma muy razonable de controlar el equilibrio entre *overfitting* y *underfitting*. Cuantas más hojas permitamos que el modelo cree, más nos moveremos del área de *underfitting* en el gráfico anterior hacia el área de *overfitting*.
+Existen algunas alternativas para controlar la profundidad del árbol, y muchas permiten que algunas rutas a través del árbol tengan mayor profundidad que otras. Sin embargo, el argumento `max_leaf_nodes` proporciona una forma muy razonable de controlar el equilibrio entre _overfitting_ y _underfitting_. Cuantas más hojas permitamos que el modelo cree, más nos moveremos del área de _underfitting_ en el gráfico anterior hacia el área de _overfitting_.
 
 Podemos usar una función utilitaria para comparar las puntuaciones MAE de diferentes valores para `max_leaf_nodes`:
-
 
 ```python
 # Importamos las bibliotecas necesarias
@@ -71,7 +64,6 @@ def get_mae(max_leaf_nodes, train_X, val_X, train_y, val_y):
     # Retornamos el MAE
     return mae
 ```
-
 
 Los datos se cargan en `train_X`, `val_X`, `train_y` y `val_y` utilizando el código que ya has visto (y que ya has escrito).
 
@@ -111,11 +103,11 @@ for max_leaf_nodes in [5, 50, 500, 5000]:  # Probamos con varios valores de nodo
 ```
 
 | Max leaf nodes | Mean Absolute Error |
-|-----------------|---------------------|
-| 5               | 347380              |
-| 50              | 258171              |
-| 500             | 243495              |
-| 5000            | 254983              |
+| -------------- | ------------------- |
+| 5              | 347380              |
+| 50             | 258171              |
+| 500            | 243495              |
+| 5000           | 254983              |
 
 De las opciones listadas, 500 es el número óptimo de hojas.
 
