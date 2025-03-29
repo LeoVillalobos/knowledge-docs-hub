@@ -1,28 +1,29 @@
 export const routesDataScienceProjects = {
-  text: 'Data Science Projects',
+  text: 'Proyectos de Ciencia de Datos',
   collapsed: false,
   items: [
     {
-      text: 'Intro to programming',
+      text: 'Python',
       collapsed: true,
       items: [
-        {text:'Index', link: '/pages/home/data_science_projects/intro_to_programming/index'},
-        {text:'Arithmetic and variables', link: '/pages/home/data_science_projects/intro_to_programming/arithmetic_and_variables'},
-        {text:'Conditions conditional statements', link: '/pages/home/data_science_projects/intro_to_programming/conditions_conditional_statements'},
-        {text:'Data Types', link: '/pages/home/data_science_projects/intro_to_programming/data_types'},
-        {text:'Functions', link: '/pages/home/data_science_projects/intro_to_programming/functions'},
-        {text:'Intro to list', link: '/pages/home/data_science_projects/intro_to_programming/intro_to_list'}
+        {text:'Índice', link: '/pages/home/data_science_projects/intro_to_programming/index'},
+        {text:'Aritmética y variables', link: '/pages/home/data_science_projects/intro_to_programming/arithmetic_and_variables'},
+        {text:'Condiciones y declaraciones condicionales', link: '/pages/home/data_science_projects/intro_to_programming/conditions_conditional_statements'},
+        {text:'Tipos de datos', link: '/pages/home/data_science_projects/intro_to_programming/data_types'},
+        {text:'Funciones', link: '/pages/home/data_science_projects/intro_to_programming/functions'},
+        {text:'Introducción a listas', link: '/pages/home/data_science_projects/intro_to_programming/intro_to_list'}
       ]
     },
     {
-      text: 'Intro to machine learning',
+      text: 'Machine Learning',
+      collapsed: false,
       items: [
-        {text:'Inicio', link: '/pages/home/data_science_projects/intro_to_machine_learning/index'},
-        {text:'how_models_work', link: '/pages/home/data_science_projects/intro_to_machine_learning/how_models_work'},
-        {text:'basic_data_exploracion', link: '/pages/home/data_science_projects/intro_to_machine_learning/basic_data_exploracion'},
-        {text:'first_machine_learning_model', link: '/pages/home/data_science_projects/intro_to_machine_learning/first_machine_learning_model'},
-        {text:'model_validation', link: '/pages/home/data_science_projects/intro_to_machine_learning/model_validation'},
-        {text:'underfitting_and_overfitting', link: '/pages/home/data_science_projects/intro_to_machine_learning/underfitting_and_overfitting'}
+        // {text:'Inicio', link: '/pages/home/data_science_projects/intro_to_machine_learning/index'},
+        {text:'Cómo funcionan los modelos', link: '/pages/home/data_science_projects/intro_to_machine_learning/how_models_work'},
+        {text:'Exploración básica de datos', link: '/pages/home/data_science_projects/intro_to_machine_learning/basic_data_exploracion'},
+        {text:'Primer modelo de aprendizaje automático', link: '/pages/home/data_science_projects/intro_to_machine_learning/first_machine_learning_model'},
+        {text:'Validación de modelos', link: '/pages/home/data_science_projects/intro_to_machine_learning/model_validation'},
+        {text:'Subajuste y sobreajuste', link: '/pages/home/data_science_projects/intro_to_machine_learning/underfitting_and_overfitting'}
       ]
     }
   ]

@@ -4,12 +4,12 @@ import { routesDataScienceProjects } from "./home/data_science_projects"
 
 
 export const sidebarHome = [
-  {
-    text: 'Inicio',
-    items: [
-      { text: 'Temas a tratar', link: '/pages/home/index' },
-    ]
-  },
+  // {
+  //   text: 'Inicio',
+  //   items: [
+  //     { text: 'Temas a tratar', link: '/pages/home/index' },
+  //   ]
+  // },
   // {
   //   text: 'Ciencia de datos',
   //   items: [
