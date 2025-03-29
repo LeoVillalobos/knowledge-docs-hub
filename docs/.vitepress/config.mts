@@ -3,7 +3,7 @@ import { sidebarHome, sidebarIA, sidebarItems } from '../src/router/index'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: 'knowledge-docs-hub',
+  base: '/knowledge-docs-hub/',
   srcDir: './src',
   lang: "es",
   title: "Knowledge Docs Hub",
