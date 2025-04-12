@@ -7,7 +7,9 @@ export default defineConfig({
   plugins: [
     vuetify({
       autoImport: true,
-      styles: 'sass', // 👈 Desactiva los estilos automáticos
+      styles: {
+        configFile: "src/styles/settings.scss"
+      }
     }),
   ],
   // resolve: {
