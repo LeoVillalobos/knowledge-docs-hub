@@ -31,7 +31,11 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
+    const vuetify = createVuetify({
+      components,
+      directives,
+    })
+
     app.use(vuetify)
-    // ...
   }
 } satisfies Theme

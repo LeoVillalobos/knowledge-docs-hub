@@ -6,7 +6,8 @@ import vuetify from 'vite-plugin-vuetify'
 export default defineConfig({
   plugins: [
     vuetify({
-      styles: 'none', // 👈 Desactiva los estilos automáticos
+      autoImport: true,
+      styles: 'sass', // 👈 Desactiva los estilos automáticos
     }),
   ],
   // resolve: {
