@@ -21,7 +21,8 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Team', link: '/team' },  // Enlace a la página del equipo
+      { text: 'Team', link: '/team' }, 
+      { text: 'vuetify', link: '/certificates' },  // Enlace a la página del equipo
     ],
 
     sidebar: {
