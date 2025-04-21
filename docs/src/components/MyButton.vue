@@ -1,77 +1,62 @@
 <!-- components/MyButton.vue -->
 <template>
- <div>
-  <v-container>
-    <v-row>
-      <v-col v-for="(certificate, index) in certificates" :key="index" cols="12" md="3">
+  <v-container fluid>
+    <v-row
+      dense
+      class="py-3"
+      align="stretch"
+      justify="center"
+      style="gap:24px"
+    >
+      <v-col
+        v-for="(certificate, index) in certificates"
+        :key="index"
+        cols="12"
+        sm="6"
+        md="3"
+        class="d-flex"
+      >
         <v-card
-          class="mx-auto my-12"
-          height="530"
-          max-width="500"
+          class="flex-grow-1 pa-4 text-center"
+          elevation="0"
+          color=" bg-grey-lighten-4"
+          rounded="lg"
         >
 
-        <v-img
+          <!-- Imagen con tamaño fijo y centrada -->
+          <v-img
           :src="certificate.img"
           class="ma-4 size-150"
           style="max-width: 100%; height: auto;"
           cover
         ></v-img>
 
-        <v-card-item>
-          <v-card-title>{{certificate.name}}</v-card-title>
+          <!-- Título y descripción centrados -->
+          <v-card-title class="text-h6 font-weight-medium mb-2">
+            {{ certificate.name }}
+          </v-card-title>
+          <v-card-text class="text-body-2 mb-4">
+            {{ certificate.description }}
+          </v-card-text>
 
-          <v-card-subtitle>
-            <span class="me-1">Local Favorite</span>
+          <v-divider class="my-2"></v-divider>
 
-            <v-icon
-              color="error"
-              icon="mdi-fire-circle"
-              size="small"
-            ></v-icon>
-          </v-card-subtitle>
-        </v-card-item>
-
-        <v-card-text>
-          <v-row
-            align="center"
-            class="mx-0"
-          >
-            <v-rating
-              :model-value="4.5"
-              color="amber"
-              density="compact"
-              size="small"
-              half-increments
-              readonly
-            ></v-rating>
-
-          </v-row>
-
-          <!-- <v-divider class="mx-4 mb-1"></v-divider> -->
-
-          <div>{{certificate.description}}</div>
-
-        </v-card-text>
-
-        <v-divider class="mx-4 mb-1"></v-divider>
-
-        <v-card-actions>
-          <v-btn
-            :href="certificate.url"
-            target="_blank"
-            rel="noopener"
-            color="deep-purple-accent-4"
-            variant="text"
-          >
-            Learn More
-          </v-btn>
-        </v-card-actions>
+          <!-- Botón -->
+          <v-card-actions class="justify-center">
+            <v-btn
+              :href="certificate.url"
+              target="_blank"
+              rel="noopener"
+              variant="text"
+              color="primary"
+            >
+              Ver certificado
+            </v-btn>
+          </v-card-actions>
         </v-card>
       </v-col>
     </v-row>
-
   </v-container>
- </div>
 </template>
 
 <script setup lang="ts">
