@@ -1,7 +1,11 @@
+---
+layout: page
+---
+
 <script setup>
-import MyButton from './components/MyButton.vue'
+import MyButton from '@components/MyButton.vue'
 </script>
 
-## Un botón Vuetify
+# Certificados
 
 <MyButton />

@@ -11,18 +11,6 @@ import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 import { aliases, mdi } from 'vuetify/iconsets/mdi'
 
-
-// const vuetify = createVuetify({
-//   components,
-//   directives,
-//   icons: {
-//     defaultSet: 'mdi',
-//     aliases,
-//     sets: { mdi },
-//   },
-// })
-
-
 export default {
   extends: DefaultTheme,
   Layout: () => {
@@ -34,11 +22,11 @@ export default {
     const vuetify = createVuetify({
       components,
       directives,
-      // icons: {
-      //   defaultSet: 'mdi',
-      //   aliases,
-      //   sets: { mdi },
-      // },
+      icons: {
+        defaultSet: 'mdi',
+        aliases,
+        sets: { mdi },
+      },
     })
 
     app.use(vuetify)

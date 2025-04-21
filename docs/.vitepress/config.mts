@@ -50,7 +50,7 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Team', link: '/team' }, 
-      { text: 'vuetify', link: '/certificates' },  // Enlace a la página del equipo
+      { text: 'Certificados', link: '/certificates' },  // Enlace a la página del equipo
     ],
 
     sidebar: {
