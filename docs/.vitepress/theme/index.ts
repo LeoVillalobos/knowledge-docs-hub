@@ -34,11 +34,11 @@ export default {
     const vuetify = createVuetify({
       components,
       directives,
-      icons: {
-        defaultSet: 'mdi',
-        aliases,
-        sets: { mdi },
-      },
+      // icons: {
+      //   defaultSet: 'mdi',
+      //   aliases,
+      //   sets: { mdi },
+      // },
     })
 
     app.use(vuetify)

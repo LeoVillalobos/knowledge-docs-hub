@@ -2,10 +2,25 @@ import { defineConfig } from 'vitepress'
 import { sidebarHome, sidebarIA, sidebarItems } from '../src/router/index'
 import vuetify from 'vite-plugin-vuetify'
 import path from 'path'
-// import { fileURLToPath } from 'node:url'
+import { fileURLToPath } from 'url'
 // En theme/index.ts
 // import './styles/main.css'
 // https://vitepress.dev/reference/site-config
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+
+// Plugin para ignorar importaciones de CSS durante el build SSR
+const ignoreCss = () => ({
+  name: 'ignore-css',
+  resolveId(id: string) {
+    if (id.endsWith('.css')) return id
+  },
+  load(id: string) {
+    if (id.endsWith('.css')) return ''  // retorna cadena vacía
+  },
+})
+
 export default defineConfig({
   base: '/knowledge-docs-hub/',
   srcDir: './src',
@@ -15,7 +30,17 @@ export default defineConfig({
 
   // Configuración de Vite
   vite: {
-    plugins: [vuetify()],
+    ssr: {
+      // Evita que Vuetify (y sus submódulos) se externalicen, para que se procesen internamente
+      noExternal: ['vuetify'],
+    },
+    plugins: [
+      ignoreCss(), // añade primero el plugin para CSS
+      vuetify({
+        autoImport: true,
+        styles: 'sass', // asegura la compilación de estilos vía Sass (asegúrate de tener instalado sass)
+      }),
+    ],
     resolve: {
       alias: {
         '@components': path.resolve(__dirname, '../src/components'),
