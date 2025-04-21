@@ -10,16 +10,6 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-// Plugin para ignorar importaciones de CSS durante el build SSR
-const ignoreCss = () => ({
-  name: 'ignore-css',
-  resolveId(id: string) {
-    if (id.endsWith('.css')) return id
-  },
-  load(id: string) {
-    if (id.endsWith('.css')) return ''  // retorna cadena vacía
-  },
-})
 
 export default defineConfig({
   base: '/knowledge-docs-hub/',
@@ -35,11 +25,8 @@ export default defineConfig({
       noExternal: ['vuetify'],
     },
     plugins: [
-      ignoreCss(), // añade primero el plugin para CSS
-      vuetify({
-        autoImport: true,
-        styles: 'sass', // asegura la compilación de estilos vía Sass (asegúrate de tener instalado sass)
-      }),
+      // ignoreCss(), // añade primero el plugin para CSS
+      vuetify(),
     ],
     resolve: {
       alias: {
