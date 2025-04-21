@@ -1,6 +1,10 @@
 import { defineConfig } from 'vitepress'
 import { sidebarHome, sidebarIA, sidebarItems } from '../src/router/index'
-
+import vuetify from 'vite-plugin-vuetify'
+import path from 'path'
+// import { fileURLToPath } from 'node:url'
+// En theme/index.ts
+// import './styles/main.css'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/knowledge-docs-hub/',
@@ -8,6 +12,18 @@ export default defineConfig({
   lang: "es",
   title: "Knowledge Docs Hub",
   description: "Centralized repository of technical documentation for courses and technologies",
+
+  // Configuración de Vite
+  vite: {
+    plugins: [vuetify()],
+    resolve: {
+      alias: {
+        '@components': path.resolve(__dirname, '../src/components'),
+      },
+    },
+  },
+
+
   themeConfig: {
 
     // Logo del sitio para los modos claro y oscuro
