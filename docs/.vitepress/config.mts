@@ -51,6 +51,7 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Team', link: '/team' }, 
       { text: 'Certificados', link: '/certificates' },  // Enlace a la página del equipo
+      { text: 'C.V.', link: '/pdf' },
     ],
 
     sidebar: {
