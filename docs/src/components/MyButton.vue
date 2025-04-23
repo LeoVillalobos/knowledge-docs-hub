@@ -86,7 +86,7 @@ const certificates: ICertificate[] = [
   },
   {
     name: 'Pinea',
-    img: '/knowledge-docs-hub/images/cert/programacion basica.png',
+    img: '/knowledge-docs-hub/images/cert/pinea.png',
     description: 'Certificado de fundamentos de programación básica.',
     url: 'https://platzi.com/p/villalobosleonardo41394/curso/3229-course/diploma/detalle/'
   },
@@ -95,6 +95,12 @@ const certificates: ICertificate[] = [
     img: '/knowledge-docs-hub/images/cert/flutter.png',
     description: 'Certificado de desarrollo de aplicaciones móviles con Flutter.',
     url: 'https://platzi.com/p/villalobosleonardo41394/curso/1386-course/diploma/detalle/'
+  },
+  {
+    name: 'Python',
+    img: '/knowledge-docs-hub/images/cert/keggle_python.png',
+    description: 'Certificado del curso de Python en Kaggle, enfocado en análisis de datos y aprendizaje automático.',
+    url: ''
   },
   {
     name: 'Componentes y composition api',
