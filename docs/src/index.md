@@ -43,6 +43,22 @@ features:
       src: https://nodejs.org/static/images/logo.svg
     title: Node Js
     details: Node.js es un entorno de ejecución para JavaScript que permite construir aplicaciones escalables y de alto rendimiento en el servidor.
+  - icon:
+      src: https://pnpm.io/es/img/pnpm-no-name-with-frame.svg
+    title: pnpm
+    details: pnpm es un gestor de paquetes rápido y eficiente para JavaScript, que utiliza enlaces simbólicos y un almacenamiento compartido para ahorrar espacio y acelerar instalaciones.
+  - icon:
+      src: https://vite.dev/logo.svg
+    title: Vite
+    details: Vite es un entorno de desarrollo rápido y moderno que optimiza la construcción de aplicaciones web con una experiencia de desarrollo ágil y eficiente.
+  - icon:
+      src: https://spring.io/images/spring-logo.svg
+    title: Java Spring Boot
+    details: Spring Boot es un framework de Java que simplifica el desarrollo de aplicaciones empresariales al proporcionar configuraciones predeterminadas y herramientas para crear aplicaciones robustas y escalables rápidamente.
+  - icon:
+      src: https://upload.wikimedia.org/wikipedia/commons/e/ee/.NET_Core_Logo.svg
+    title: .NET Core
+    details: .NET Core es una plataforma de desarrollo modular, de código abierto y multiplataforma que permite crear aplicaciones modernas, escalables y de alto rendimiento.
 ---
 
 ## Getting Started
