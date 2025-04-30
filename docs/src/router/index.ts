@@ -1,21 +1,12 @@
 import { routesIA } from "./artificial_intelligence"
+import { routesCourses } from "./courses"
 import { routesDataScience } from "./data_science"
 import { routesDataScienceProjects } from "./home/data_science_projects"
+import { routesProgrammingLanguages } from "./programming_languages"
+import { routesTecnologies } from "./technologies"
 
 
 export const sidebarHome = [
-  // {
-  //   text: 'Inicio',
-  //   items: [
-  //     { text: 'Temas a tratar', link: '/pages/home/index' },
-  //   ]
-  // },
-  // {
-  //   text: 'Ciencia de datos',
-  //   items: [
-  //     { text: 'Introduccion', link: '/pages/data_science/index' },
-  //   ]
-  // },
   routesDataScienceProjects
 ]
 
@@ -30,4 +21,16 @@ export const sidebarItems = [
 
 export const sidebarIA = [
   routesIA
+]
+
+export const sidebarTecnologies = [
+  routesTecnologies
+]
+
+export const sidebarCourses = [
+  routesCourses
+]
+
+export const sidebarProgrammingLanguages = [
+  routesProgrammingLanguages
 ]

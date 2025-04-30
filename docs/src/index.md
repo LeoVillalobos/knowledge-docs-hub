@@ -11,8 +11,14 @@ hero:
     dark: /images/new.svg
   actions:
     - theme: brand
-      text: Inicio
-      link: /pages/home/index
+      text: Technologies
+      link: /pages/technologies/index
+    - theme: brand
+      text: Courses
+      link: /pages/courses/index
+    - theme: brand
+      text: Programming Languages
+      link: /pages/programming_languages/index
 
 features:
   - icon:
@@ -59,6 +65,14 @@ features:
       src: https://upload.wikimedia.org/wikipedia/commons/e/ee/.NET_Core_Logo.svg
     title: .NET Core
     details: .NET Core es una plataforma de desarrollo modular, de código abierto y multiplataforma que permite crear aplicaciones modernas, escalables y de alto rendimiento.
+  - icon:
+      src: https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg
+    title: Tailwind CSS
+    details: Tailwind CSS es un framework de utilidades para CSS que permite construir diseños personalizados de manera rápida y eficiente mediante clases predefinidas.
+  - icon:
+      src: https://upload.wikimedia.org/wikipedia/commons/1/17/GraphQL_Logo.svg
+    title: GraphQL
+    details: GraphQL es un lenguaje de consulta para APIs que permite obtener exactamente los datos necesarios, optimizando las solicitudes y mejorando la eficiencia en el desarrollo de aplicaciones.
 ---
 
 ## Getting Started

@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import { sidebarHome, sidebarIA, sidebarItems } from '../src/router/index'
+import { sidebarCourses, sidebarHome, sidebarIA, sidebarItems, sidebarProgrammingLanguages, sidebarTecnologies } from '../src/router/index'
 import vuetify from 'vite-plugin-vuetify'
 import path from 'path'
 import { fileURLToPath } from 'url'
@@ -55,9 +55,12 @@ export default defineConfig({
     ],
 
     sidebar: {
-      '/pages/home/': sidebarHome,
-      '/pages/data_science/': sidebarItems,
-      '/pages/AI/': sidebarIA,
+      // '/pages/home/': sidebarHome,
+      // '/pages/data_science/': sidebarItems,
+      // '/pages/AI/': sidebarIA,
+      '/pages/courses/': sidebarCourses,
+      '/pages/technologies/': sidebarTecnologies,
+      '/pages/programming_languages/': sidebarProgrammingLanguages,
     },
 
      // Pie de página
