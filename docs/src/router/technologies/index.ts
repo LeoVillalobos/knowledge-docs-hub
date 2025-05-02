@@ -1,3 +1,5 @@
+import { it } from "node:test";
+
 export const routesTecnologies = {
   text: 'Technologies',
   collapsed: false,
@@ -15,6 +17,12 @@ export const routesTecnologies = {
       items: [
         { text: '¿Qué es Kubernetes?', link: '/pages/technologies/Kubernetes/index'},
         { text: 'K8s Components', link: '/pages/technologies/Kubernetes/k8s_components'},
+        {
+          text: 'Tutoriales',
+          items: [
+            { text: 'Hello minikube', link: '/pages/technologies/kubernetes/tutorials/hello_minikube'},
+            { text: 'My Hello minikube', link: '/pages/technologies/kubernetes/tutorials/my_hello_minikube'},
+          ]},
       ]
     },
     {
