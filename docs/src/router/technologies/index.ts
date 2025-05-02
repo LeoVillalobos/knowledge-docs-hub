@@ -11,6 +11,13 @@ export const routesTecnologies = {
       // ]
     },
     {
+      text: 'Kubernetes (K8s)',
+      items: [
+        { text: '¿Qué es Kubernetes?', link: '/pages/technologies/Kubernetes/index'},
+        { text: 'K8s Components', link: '/pages/technologies/Kubernetes/k8s_components'},
+      ]
+    },
+    {
       text: 'Vue.js',
       items: [
         // { text: 'Introduccion', link: '/pages/technologies/index'},
