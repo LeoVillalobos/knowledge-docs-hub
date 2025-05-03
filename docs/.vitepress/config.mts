@@ -18,6 +18,23 @@ export default defineConfig({
   title: "Knowledge Docs Hub",
   description: "Centralized repository of technical documentation for courses and technologies",
 
+  head: [
+    ['link', { rel: 'icon', href: '/knowledge-docs-hub/favicon.ico' }],  // Icono de la pestaña del navegador
+    ['meta', { name: 'keywords', content: 'Knowledge Docs Hub, documentación de desarrollador, cursos de programación, portafolio de desarrollo, Vue, React, Node.js, Django, VitePress, API REST, TypeScript, Firebase, Rust, Express, desarrollo web, proyectos personales, aprendizaje continuo, guía para desarrolladores, documentación técnica' }],
+    ['meta', { name: 'author', content: 'Brallan Leonardo Sanchez Villalobos' }],
+    ['meta', { name: 'robots', content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' }],
+    ['link', { rel: 'canonical', href: 'https://leovillalobos.github.io/knowledge-docs-hub/' }],
+
+    // Open Graph
+    ['meta', { property: 'og:title', content: 'Knowledge Docs Hub' }],
+    ['meta', { property: 'og:description', content: 'Knowledge Docs Hub, documentación de desarrollador, cursos de programación, portafolio de desarrollo, Vue, React, Node.js, Django, VitePress, API REST, TypeScript, Firebase, Rust, Express, desarrollo web, proyectos personales, aprendizaje continuo, guía para desarrolladores, documentación técnica' }],
+    ['meta', { property: 'og:image', content: 'https://leovillalobos.github.io/knowledge-docs-hub/knowledge-docs-hub.png' }],
+    ['meta', { property: 'og:url', content: 'https://leovillalobos.github.io/knowledge-docs-hub/' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+
+  ],
+  lastUpdated: true,  // Muestra la fecha de la última actualización en la parte inferior de cada página
+
   // Configuración de Vite
   vite: {
     ssr: {
