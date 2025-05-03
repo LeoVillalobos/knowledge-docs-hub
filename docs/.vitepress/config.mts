@@ -23,6 +23,7 @@ export default defineConfig({
     ['meta', { name: 'keywords', content: 'Knowledge Docs Hub, documentación de desarrollador, cursos de programación, portafolio de desarrollo, Vue, React, Node.js, Django, VitePress, API REST, TypeScript, Firebase, Rust, Express, desarrollo web, proyectos personales, aprendizaje continuo, guía para desarrolladores, documentación técnica' }],
     ['meta', { name: 'author', content: 'Brallan Leonardo Sanchez Villalobos' }],
     ['meta', { name: 'robots', content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1' }],
+    ['meta', { name: 'google-site-verification', content: 'R6oSkIcH1Ebu0gTYxujTM5_qtQiz6JWMrGVAlkfCmdc' }],
     ['link', { rel: 'canonical', href: 'https://leovillalobos.github.io/knowledge-docs-hub/' }],
 
     // Open Graph
