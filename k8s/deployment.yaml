@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: knowledge-docs-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: knowledge-docs
+  template:
+    metadata:
+      labels:
+        app: knowledge-docs
+    spec:
+      containers:
+        - name: knowledge-docs
+          image: knowledge-docs-hub:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 80
