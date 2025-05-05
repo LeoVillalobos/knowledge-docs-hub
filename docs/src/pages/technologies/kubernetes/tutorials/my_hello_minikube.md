@@ -81,3 +81,106 @@ Verifica la instalación de Minikube ejecutando:
 ```
 minikube version
 ```
+
+Despues de verificar que todo se haya instalado correctamente, ejecuta el comando:
+
+```
+minikube start --driver=docker
+```
+
+::: tip
+
+Este comando incia un clúster de Kubernetes local usando **Minikube**, especificando que se use **Docker** como entorno de ejecución.
+
+**Requisitos:**
+
+- Tener Minikube y Docker instalados y funcionando.
+
+**Verificar el estado del clúster:**
+
+```
+minikube status
+kubectl cluster-info
+kubectl get nodes
+```
+
+:::
+
+## Conflicto de versiones entre kubectl y Kubernetes
+
+✅ **¿Qué pasó?**
+Minikube levantó un contenedor Docker con **Kubernetes v1.22.3**.
+
+⚠️ **Advertencia:**
+Tienes instalado **kubectl v1.30.5**, lo que puede causar **incompatibilidades** con el clúster.
+
+💡 **Sugerencia:**
+Usa el `kubectl` que trae Minikube para evitar errores de compatibilidad:
+
+```
+minikube kubectl -- get pods -A
+```
+
+🎯 **¿Qué puedes hacer ahora?**
+
+1. **Verifica el estado del clúster:**
+
+   ```
+   kubectl get nodes
+   ```
+
+   Si ves un nodo con estado `Ready`, todo está funcionando.
+
+2. **(Opcional) Usa el kubectl de Minikube:**
+
+   ```
+   minikube kubectl -- get pods -A
+   ```
+
+3. **(Aún más fácil) Deja que Minikube lo configure:**
+   ```
+   minikube kubectl -- bash
+   ```
+
+## Dashboard
+
+Esto abrirá una interfaz web para ver gráficamente tus pods, deployments, servicios, etc.
+
+```
+minikube dashboard
+```
+
+## Usar imágenes Docker personalizadas con Minikube y Kubernetes
+
+**1. Construir una imagen Docker:**
+
+```
+docker build -t miapp:v1 .
+```
+
+**2. Si usas Minikube, primero conecta su entorno Docker:**
+
+```
+eval $(minikube docker-env)
+docker build -t miapp:v1 .
+```
+
+**3. Crear el deployment en Kubernetes:**
+
+```
+kubectl create deployment miapp --image=miapp:v1
+```
+
+**4. (Opcional) Exponerlo con un Service:**
+
+```
+kubectl expose deployment miapp --type=NodePort --port=80
+```
+
+**🤖 ¿Qué hace Kubernetes por ti?**
+
+- Crea un Pod con esa imagen.
+- Ejecuta el contenedor dentro del Pod.
+- Lo mantiene corriendo (lo reinicia si se cae).
+- Escala réplicas si se solicitan.
+- Permite actualizaciones con _rolling update_ si cambias la imagen.

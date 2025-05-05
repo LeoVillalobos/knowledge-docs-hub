@@ -13,10 +13,17 @@ export const routesTecnologies = {
       // ]
     },
     {
+      text: 'Software en Windows',
+      items: [
+        { text: 'Chocolatey', link: '/pages/technologies/windows/chocolatey'},
+      ]
+    },
+    {
       text: 'Kubernetes (K8s)',
       items: [
         { text: '¿Qué es Kubernetes?', link: '/pages/technologies/kubernetes/index'},
         { text: 'K8s Components', link: '/pages/technologies/kubernetes/k8s_components'},
+        { text: 'Helm', link: '/pages/technologies/kubernetes/helm'},
         {
           text: 'Tutoriales',
           items: [
