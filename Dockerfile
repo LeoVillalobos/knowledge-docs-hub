@@ -6,6 +6,9 @@ WORKDIR /app
 
 RUN corepack enable && corepack prepare pnpm@latest --activate
 
+# Instala Git
+RUN apk add --no-cache git
+
 # Copia los archivos de configuración
 COPY package.json .
 COPY pnpm-lock.yaml .
