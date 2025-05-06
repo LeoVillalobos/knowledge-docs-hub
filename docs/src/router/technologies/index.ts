@@ -24,6 +24,7 @@ export const routesTecnologies = {
         { text: '¿Qué es Kubernetes?', link: '/pages/technologies/kubernetes/index'},
         { text: 'K8s Components', link: '/pages/technologies/kubernetes/k8s_components'},
         { text: 'Helm', link: '/pages/technologies/kubernetes/helm'},
+        { text: 'Comandos', link: '/pages/technologies/kubernetes/commands'},
         {
           text: 'Tutoriales',
           items: [
