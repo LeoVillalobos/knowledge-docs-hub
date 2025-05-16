@@ -20,7 +20,7 @@ El gestor de paquetes descarga las dependencias especificadas en `package.json` 
 
 pnpm guarda las dependencias que instalas una sola vez en tu computadora, en un lugar central llamado “almacén global” (global store).
 
-No copia los archivos completos en cada caso, sino que los descarga una sola vez y los reutiliza en todos los entornos que requieren la misma versión. De esta forma, cada aplicación puede acceder a sus dependencias sin necesidad de duplicar los archivos físicamente.
+En lugar de copiar todos los archivos en cada proyecto, reutiliza esas versiones desde el almacén. Así, cada aplicación accede a sus dependencias sin duplicarlas físicamente.
 
 🧠 Se podria decir que lo que realmente lo distingue es su sistema de instalación
 basado en un almacén global con enlaces físicos `(hard links)`, que evita duplicaciones, acelera las instalaciones y ahorra una
