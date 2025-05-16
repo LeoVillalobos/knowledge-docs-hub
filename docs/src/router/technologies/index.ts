@@ -53,8 +53,10 @@ export const routesTecnologies = {
     },
     {
       text: 'PNPM',
+      link: '/pages/technologies/pnpm/index',
       items: [
         { text: 'Introduccion', link: '/pages/technologies/pnpm/index'},
+        // { text: 'Instalacion', link: '/pages/technologies/pnpm/intalacion'},
       ]
     },
     {
