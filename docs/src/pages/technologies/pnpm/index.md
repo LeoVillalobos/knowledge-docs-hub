@@ -7,7 +7,7 @@ titleTemplate: ¿Qué es?
 
 **PNPM** (Performant NPM) es un gestor de paquetes para Node.js que optimiza la forma en que se instala y organiza el directorio `node_modules`.
 
-Una de las razones por las que se volvio tan famoso es porque ofrece una alternativa más rápida y eficiente en disco frente a estos otros gestores npm y Yarn.
+Una de las razones por las que se volvio tan famoso es debido a que ofrece una alternativa más rápida y eficiente en disco frente a estos otros gestores npm y Yarn.
 
 ::: warning
 Antes de profundizar en PNPM, es importante entender qué es y cómo funciona la carpeta `node_modules`.
