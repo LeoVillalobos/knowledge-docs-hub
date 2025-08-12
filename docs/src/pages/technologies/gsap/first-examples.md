@@ -14,26 +14,36 @@ Este ejemplo demuestra cómo crear una animación simple con GSAP (un Tween) que
 
 Este patrón es útil para animaciones interactivas donde quieres controlar el flujo, por ejemplo, animaciones de botones, cajas, o efectos que se activan según acciones del usuario.
 
-'''
+```vue
 <template>
-<v-container class="d-flex flex-column align-center justify-center" style="height: 400px;">
-<div ref="box" class="box" style="width: 100px; height: 100px; background-color: #4caf50; margin-bottom: 20px;"></div>
+  <v-container
+    class="d-flex flex-column align-center justify-center"
+    style="height: 400px;"
+  >
+    <div
+      ref="box"
+      class="box"
+      style="width: 100px; height: 100px; background-color: #4caf50; margin-bottom: 20px;"
+    ></div>
 
     <v-row class="mb-6" justify="center" align="center" dense>
       <v-btn class="mx-2" color="primary" @click="playTween">Play Tween</v-btn>
-      <v-btn class="mx-2" color="secondary" @click="pauseTween">Pause Tween</v-btn>
-      <v-btn class="mx-2" color="error" @click="reverseTween">Reverse Tween</v-btn>
+      <v-btn class="mx-2" color="secondary" @click="pauseTween"
+        >Pause Tween</v-btn
+      >
+      <v-btn class="mx-2" color="error" @click="reverseTween"
+        >Reverse Tween</v-btn
+      >
     </v-row>
-
   </v-container>
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted } from 'vue'
-import { gsap, Tween } from 'gsap'
+import { ref, onMounted } from "vue";
+import { gsap, Tween } from "gsap";
 
-const box = ref<HTMLDivElement | null>(null)
-let tween: Tween | null = null
+const box = ref<HTMLDivElement | null>(null);
+let tween: Tween | null = null;
 
 onMounted(() => {
   if (box.value) {
@@ -42,21 +52,21 @@ onMounted(() => {
       x: 200,
       duration: 3,
       paused: true,
-      ease: 'power1.inOut'
-    })
+      ease: "power1.inOut",
+    });
   }
-})
+});
 
 function playTween() {
-  tween?.play()
+  tween?.play();
 }
 
 function pauseTween() {
-  tween?.pause()
+  tween?.pause();
 }
 
 function reverseTween() {
-  tween?.reverse()
+  tween?.reverse();
 }
 </script>
 
@@ -65,8 +75,7 @@ function reverseTween() {
   border-radius: 8px;
 }
 </style>
-
-'''
+```
 
 ---
 
@@ -82,52 +91,71 @@ Este ejemplo introduce el uso de un `Timeline` para organizar múltiples animaci
 
 Este enfoque es ideal para crear introducciones, presentaciones o animaciones con múltiples etapas que deben correr en orden.
 
-'''
+```vue
 <template>
-<v-container class="d-flex flex-column align-center justify-center" style="height: 400px;">
-<v-row class="mb-4" justify="center" align="center" dense>
-<div ref="greenBox" class="color-box green"></div>
-<div ref="blueBox" class="color-box blue"></div>
-<div ref="orangeBox" class="color-box orange"></div>
-</v-row>
-
-    <v-row justify="center" align="center" dense>
-      <v-btn class="mx-2" color="primary" @click="playTimeline">Play Timeline</v-btn>
-      <v-btn class="mx-2" color="secondary" @click="pauseTimeline">Pause Timeline</v-btn>
-      <v-btn class="mx-2" color="error" @click="reverseTimeline">Reverse Timeline</v-btn>
+  <v-container
+    class="d-flex flex-column align-center justify-center"
+    style="height: 400px;"
+  >
+    <v-row class="mb-4" justify="center" align="center" dense>
+      <div ref="greenBox" class="color-box green"></div>
+      <div ref="blueBox" class="color-box blue"></div>
+      <div ref="orangeBox" class="color-box orange"></div>
     </v-row>
 
+    <v-row justify="center" align="center" dense>
+      <v-btn class="mx-2" color="primary" @click="playTimeline"
+        >Play Timeline</v-btn
+      >
+      <v-btn class="mx-2" color="secondary" @click="pauseTimeline"
+        >Pause Timeline</v-btn
+      >
+      <v-btn class="mx-2" color="error" @click="reverseTimeline"
+        >Reverse Timeline</v-btn
+      >
+    </v-row>
   </v-container>
 </template>
 
-<script lang="ts" setup>
-import { ref, onMounted } from 'vue'
-import { gsap, Timeline } from 'gsap'
+<script setup lang="ts">
+import { ref, onMounted } from "vue";
+import { gsap, Timeline } from "gsap";
 
-const greenBox = ref<HTMLDivElement | null>(null)
-const blueBox = ref<HTMLDivElement | null>(null)
-const orangeBox = ref<HTMLDivElement | null>(null)
-let timeline: Timeline | null = null
+const greenBox = ref<HTMLDivElement | null>(null);
+const blueBox = ref<HTMLDivElement | null>(null);
+const orangeBox = ref<HTMLDivElement | null>(null);
+let timeline: Timeline | null = null;
 
 onMounted(() => {
   if (greenBox.value && blueBox.value && orangeBox.value) {
-    timeline = gsap.timeline({ paused: true })
-    timeline.to(greenBox.value, { duration: 1, x: 300, backgroundColor: '#1b5e20' })
-      .to(blueBox.value, { duration: 1.5, x: 300, rotation: 180, backgroundColor: '#0d47a1' })
-      .to(orangeBox.value, { duration: 1, x: 300, rotation: 360, backgroundColor: '#ef6c00' })
+    timeline = gsap.timeline({ paused: true });
+    timeline
+      .to(greenBox.value, { duration: 1, x: 300, backgroundColor: "#1b5e20" })
+      .to(blueBox.value, {
+        duration: 1.5,
+        x: 300,
+        rotation: 180,
+        backgroundColor: "#0d47a1",
+      })
+      .to(orangeBox.value, {
+        duration: 1,
+        x: 300,
+        rotation: 360,
+        backgroundColor: "#ef6c00",
+      });
   }
-})
+});
 
 function playTimeline() {
-  timeline?.play()
+  timeline?.play();
 }
 
 function pauseTimeline() {
-  timeline?.pause()
+  timeline?.pause();
 }
 
 function reverseTimeline() {
-  timeline?.reverse()
+  timeline?.reverse();
 }
 </script>
 
@@ -151,8 +179,7 @@ function reverseTimeline() {
   background-color: #ff9800;
 }
 </style>
-
-'''
+```
 
 ---
 
