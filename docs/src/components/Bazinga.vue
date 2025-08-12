@@ -9,7 +9,6 @@ const img = '/knowledge-docs-hub/images/monkey.png';
     <img
       :src="img"
       alt="Monkey"
-      width="30%"
     />
   </div>
 </template>
@@ -18,5 +17,10 @@ const img = '/knowledge-docs-hub/images/monkey.png';
 .image-container {
   display: flex;
   justify-content: center;
+}
+
+.image-container img {
+  max-width: 90vw;   /* ancho máximo 90% de viewport width */
+  height: auto;      /* que mantenga proporción */
 }
 </style>
