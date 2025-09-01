@@ -55,11 +55,16 @@ features:
     details: pnpm es un gestor de paquetes rápido y eficiente para JavaScript, que utiliza enlaces simbólicos y un almacenamiento compartido para ahorrar espacio y acelerar instalaciones.
     link: /pages/technologies/pnpm/index
   - icon:
+      src: https://upload.wikimedia.org/wikipedia/commons/c/c5/Nginx_logo.svg
+    title: Nginx
+    details: Nginx es un servidor web y proxy inverso de alto rendimiento, ampliamente utilizado para servir aplicaciones web, balancear carga y mejorar la seguridad.
+    link: /pages/technologies/nginx/index
+  - icon:
       src: https://vite.dev/logo.svg
     title: Vite
     details: Vite es un entorno de desarrollo rápido y moderno que optimiza la construcción de aplicaciones web con una experiencia de desarrollo ágil y eficiente.
   - icon:
-      src: https://spring.io/images/spring-logo.svg
+      src: https://upload.wikimedia.org/wikipedia/commons/4/44/Spring_Framework_Logo_2018.svg
     title: Java Spring Boot
     details: Spring Boot es un framework de Java que simplifica el desarrollo de aplicaciones empresariales al proporcionar configuraciones predeterminadas y herramientas para crear aplicaciones robustas y escalables rápidamente.
   - icon:

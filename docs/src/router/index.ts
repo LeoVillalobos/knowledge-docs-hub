@@ -23,9 +23,7 @@ export const sidebarIA = [
   routesIA
 ]
 
-export const sidebarTecnologies = [
-  routesTecnologies
-]
+export const sidebarTecnologies = routesTecnologies
 
 export const sidebarCourses = [
   routesCourses
