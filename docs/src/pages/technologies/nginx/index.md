@@ -41,7 +41,7 @@ Imagina que Nginx es como **el recepcionista de un edificio**:
 # Ejemplo simple de proxy inverso en Nginx
 
 location /api/ {
-proxy_pass http://backend:3000/;
+  proxy_pass http://backend:3000/;
 }
 ```
 
